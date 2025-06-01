@@ -1,0 +1,19 @@
+let ul = document.getElementsByClassName('list')
+undefined
+ul.innerHTML += '<li> new Item </li>'
+'undefined<li> new Item </li>'
+ul[0].innerHTML+='<li> new Item </li>'
+'\n            <li class="list-items">one</li>\n            <li class="list-items">two</li>\n            <li class="list-items">three</li>\n        <li> new Item </li>'
+let ull = document.querySelector('.list')
+undefined
+let li = document.createElement('li') 
+undefined
+li.tC
+undefined
+li.textContent = 'second new Item'
+'second new Item'
+ull.appendChild('li')
+VM4352:1 Uncaught TypeError: Failed to execute 'appendChild' on 'Node': parameter 1 is not of type 'Node'.
+    at <anonymous>:1:5
+(anonymous) @ VM4352:1
+ull.appendChild(li)
