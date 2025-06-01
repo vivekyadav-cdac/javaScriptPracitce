@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relation Practice</title>
+</head>
+<body>
+    <div class="parent-div">
+        <div class="inner-div">MonDay</div>
+        <div class="inner-div">TuesDay</div>
+        <div class="inner-div">WednesDay</div>
+        <div class="inner-div">ThursDay</div>
+    </div>
+    <script>
+        const parent = document.querySelector('.parent-div')
+        console.log(parent);
+        console.log(parent.children);
+        // console.log(parent.children[0].innerHTML)
+        // for (let i = 0; i < parent.children.length; i++) {
+        //     console.log(parent.children[i].innerText) 
+        // }
+        // parent.children[0].style.color = 'green'
+        // parent.children[1].style.backgroundColor = 'green'
+        // console.log(parent.firstElementChild)
+        // console.log(parent.lastElementChild);
+        // parent.lastElementChild.style.color = 'magenta'
+        // parent.firstElementChild.style.backgroundColor = 'yellow'
+
+        const firstChild = parent.firstElementChild;
+        
+        <!--- we can go back to parent using child --->
+        
+        console.log(firstChild.parentElement);
+
+        // we can also access sibling of an object
+        console.log(firstChild.nextElementSibling);
+
+        // we can also get all the child nodes of an element 
+        // child nodes are nodes that are child of an object rendered in a Dom tree
+
+        console.log(parent.childNodes);
+        
+        //NodeList(9) [text, div.inner-div, text, div.inner-div, text, div.inner-div, text, div.inner-div, text]
+        //Here nine child nodes because carriage return is also counted
+    </script>
+</body>
+</html>
