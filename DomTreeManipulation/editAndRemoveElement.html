@@ -25,6 +25,21 @@
         }
         addLanguage('java')
         addLanguage('golang')
+
+        // edit int the element
+        const secondLi = document.querySelector('li:nth-child(2)');
+        const newLi = document.createElement('li');
+        newLi.textContent ='Rust';
+        secondLi.replaceWith(newLi)
+
+        // another method to edit using outerhtml
+        const firstLang = document.querySelector('li:first-child')
+        firstLang.outerHTML = `<li>Assembly</li>`
+        
+        // removing an element
+
+        const lastLang = document.querySelector('li:last-child')
+        lastLang.remove()
     </script>
 </body>
 </html>
