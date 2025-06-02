@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="inner-div">
+        <h1 class="heading">Set Time Out</h1>
+        <button class="start">Start</button>
+        <button class="stop">Stop</button>
+    </div>
+</body>
+<script>
+    let timeOut
+    let changeHeading = function(){
+        timeOut =setTimeout(function(){
+            document.querySelector('.heading').innerText = 'Time out is working'
+        },2000)
+    }
+
+    document.getElementsByClassName('start')[0].addEventListener('click',changeHeading);
+    document.getElementsByClassName('stop')[0].addEventListener('click',function(e){
+        clearTimeOut(timeOut)
+    })
+</script>
+</html>
