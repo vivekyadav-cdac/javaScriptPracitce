@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h1>
+            This is HTTXMLRequest
+        </h1>
+    </div>
+</body style="backgroundColor:#212121">
+<script>
+    /*XMLHttpRequest (XHR) objects are used to interact with servers. You can retrieve data from a URL without having to do a full page refresh. This enables a Web page to update just part of a page without disrupting what the user is doing.*/
+    const apiUrl = 'https://api.github.com/users/vivekyadav-cdac'
+    // XMLHttpRequest Object
+    const xhr = new XMLHttpRequest();
+
+    // onreadystatechange keeps track of the state of xmlhr object
+    xhr.onreadystatechange = function(){
+        console.log(xhr.readyState)
+        if(xhr.readyState === 4){
+            console.log(this.responseText)
+            // this.responseText comes in the form of json so always parse this JSON
+            const data =JSON.parse(this.responseText);
+            // JSON.parse converts string to object
+            console.log(data.public_repos)
+        }
+    }
+
+    // open is used to used to initialize a request 
+    // two parameters 
+    // 1- can be any method -> GET , POST, PUT, DELETE
+    // 2- a url on which request is send -> and api url
+    // 3- optional - can be (async-> true/false) (user->username && password -> password) <= for authentication purposes 
+xhr.open("GET", apiUrl, true);
+
+    // method send() sends the request to the server.
+    //send()-> for GET & HEAD
+    //send(body) -> for PUT
+xhr.send(null);
+
+</script>
+
+</html>
